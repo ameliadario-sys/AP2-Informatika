@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -64,26 +64,35 @@
       box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     }
 
-    /* --- Table Design --- */
-    table, th, td {
-      border: 1px solid black;
+    /* --- Table Row (side by side) --- */
+    .table-row {
+      display: flex;
+      justify-content: center; /* center both tables */
+      align-items: stretch; /* make same height */
+      gap: 40px; /* space between tables */
+      margin-top: 20px;
+    }
+
+    .table-row table {
+      width: 300px; /* same width */
       border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      overflow: hidden;
     }
 
-    table {
-      margin: 20px auto;
-      width: 60%;
-      text-align: left;
-    }
-
-    th {
+    .table-row th {
       background-color: brown;
       color: bisque;
       padding: 10px;
+      text-align: left;
     }
 
-    td {
+    .table-row td {
       padding: 8px;
+      border: 1px solid black;
+      height: 40px; /* same row height */
     }
 
     /* --- Description --- */
@@ -119,21 +128,24 @@
     <img src="WhatsApp Image 2025-11-11 at 22.03.58_effc23eb.jpg" alt="Foto Cherish">
   </div>
 
-  <table>
-    <tr><th>Biodata</th><th>Keterangan</th></tr>
-    <tr><td>Nama</td><td>Amelia Dario</td></tr>
-    <tr><td>Kelas</td><td>8C</td></tr>
-    <tr><td>Tanggal lahir</td><td>21 Maret 2012</td></tr>
-    <tr><td>Hobi</td><td>Tidur</td></tr>
-  </table>
+  <!-- Two equal tables side by side -->
+  <div class="table-row">
+    <table>
+      <tr><th>Biodata</th><th>Keterangan</th></tr>
+      <tr><td>Nama</td><td>Amelia Dario</td></tr>
+      <tr><td>Kelas</td><td>8C</td></tr>
+      <tr><td>Tanggal lahir</td><td>21 Maret 2012</td></tr>
+      <tr><td>Hobi</td><td>Tidur</td></tr>
+    </table>
 
-  <table>
-    <tr><th>Biodata</th><th>Keterangan</th></tr>
-    <tr><td>Nama</td><td>Cherish Priella Widjaya</td></tr>
-    <tr><td>Kelas</td><td>8C</td></tr>
-    <tr><td>Tanggal lahir</td><td>25 Desember 2012</td></tr>
-    <tr><td>Hobi</td><td>Menari</td></tr>
-  </table>
+    <table>
+      <tr><th>Biodata</th><th>Keterangan</th></tr>
+      <tr><td>Nama</td><td>Cherish Priella Widjaya</td></tr>
+      <tr><td>Kelas</td><td>8C</td></tr>
+      <tr><td>Tanggal lahir</td><td>25 Desember 2011</td></tr>
+      <tr><td>Hobi</td><td>Menari</td></tr>
+    </table>
+  </div>
 
   <h2>Deskripsi</h2>
   <p>Kami adalah siswa kelas 8C yang membuat website sederhana untuk tugas Informatika. Website ini berisi biodata tokoh nasional Indonesia dan informasi singkat tentang kami.</p>
